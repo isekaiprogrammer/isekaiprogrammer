@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CASI || Homepage</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      .card-body {
+        color: black;
+      }
+      a {
+        text-decoration: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('../layouts/navbar.ejs'); %>
+    <div class="premiumregis">
+      <h1 style="text-align: center">Premium Registration</h1>
+      <p style="text-align: center">
+        Segeralah bergabung memnjadi member premium untuk menikmati fitur -
+        fitur lain-nya
+      </p>
+      <form class="needs-validation" novalidate>
+        <div class="form">
+          <label for="validationNIK">NIK</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationNIK"
+            placeholder="31710XXXXXXXXXXX"
+            aria-valuemin="16"
+            required
+          />
+          <div class="valid-feedback">Benar!</div>
+          <div class="invalid-feedback">Tolong diisi dengan benar!</div>
+          <br />
+        </div>
+
+        <div class="form">
+          <label for="selfie">Selfie with your identification card</label><br />
+          <input
+            type="file"
+            class="form-control"
+            id="validationSelfie"
+            name="selfie"
+            required
+          />
+          <label for="selfie"
+            >(Limit file size is 5mb, file can be either .jpg or .png)</label
+          >
+          <div class="invalid-feedback">Ada kesalahan.</div>
+        </div>
+        <br />
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="invalidCheck"
+            required
+          />
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">You must agree before submitting.</div>
+          <br />
+        </div>
+        <br />
+        <div style="text-align: right">
+          <a class="btn btn-primary" href="/premium" role="button">Back</a>
+          <button class="btn btn-primary" href="#" role="button" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <%- include('../layouts/footer.ejs'); %>
+  </body>
+</html>
